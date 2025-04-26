@@ -43,8 +43,9 @@ These insights from EDA will contribute to optimizing workforce planning, improv
 
 ---
 
-**USED USED SQL CODES**
-SELECT COUNT(*) AS TotalTruckDrivers
+**USED SQL CODES**
+_SQL_
+```SELECT COUNT(*) AS TotalTruckDrivers
 FROM employees
 WHERE job_title = 'Truck Driver';
 SELECT COUNT(*) AS EfficientTrucks FROM trucks WHERE efficiency_status = 'Efficient';
@@ -53,4 +54,5 @@ SELECT truck_id, COUNT(*) AS BreakdownCount FROM maintenance_log WHERE maintenan
 SELECT truck_id, COUNT(*) AS MaintenanceCount FROM maintenance_log GROUP BY truck_id;
 SELECT COUNT(*) AS EmployeesHiredInLastYear FROM employees WHERE hire_date >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
 SELECT YEAR(hire_date) AS Year, MONTH(hire_date) AS Month, COUNT(*) AS EmployeesHired FROM employees GROUP BY YEAR(hire_date), MONTH(hire_date) ORDER BY YEAR(hire_date) DESC, MONTH(hire_date) DESC;
+```
 
